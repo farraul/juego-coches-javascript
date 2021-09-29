@@ -1,5 +1,55 @@
-#main-cars{
+section{
+padding: 100px;
+}
+div#container-cars {
 display: flex;
+width: 100%;
+}
+.selec-car{
+width: 33%;
+}
+.the-cars{
+width: 100%;
+}
+#fase1{
+background-image:url(../img/background-1.jpg);
+background-size: cover;
+}
+#fase2{
+background-color: rgb(173, 89, 184);
+}
+#fase3{
+background-color: rgb(178, 171, 214);
+}
+#fase4{
+background-color: rgb(195, 157, 179);
+}
+#fase5{
+background-color: rgb(158, 218, 134);
+}
+.sections{
+height: 100vh;
+}
+.fasewant {
+text-align: center;
+width: fit-content;
+background-color: black;
+color: white;
+padding: 25px 50px;
+font-size: 30px;
+border-radius: 100px;
+/* text-align: center; */
+margin: auto;
+}
+.selec-car {
+    border: 3px solid #ad59b8;
+}
+.align-center{
+text-align: center;
+}
+.white{color: white;}
 
+
+.picture-dark{
 
 }

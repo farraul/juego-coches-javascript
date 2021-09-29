@@ -1,17 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
+    <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1">
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <meta name="author" content="raul">
+    <meta name="description" content="Juego ce coches en html css y js">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="js/javascript-pantallas.js"></script>
 </head>
+
 <body>
 
+<section id="fase1" style="display:block;" class="sections">
+    <div class="flex">  
+        <h1 class="align-center white">Bienvenidos a la Race Center de toronto</h1>
+        <div class="fasewant" onclick="screens(2)">Listos!</div>
+    </div>
+</section>  
+
+<section id="fase2" style="display: none;" class="sections">
+        <div id="container-cars">
+            <div class="selec-car">
+                <img onclick="choose(1)" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>   
+            </div>
+            <div class="selec-car">
+                <img onclick="choose(2)" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>   
+            </div>
+            <div class="selec-car">
+                <img onclick="choose(3)" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>   
+            </div>
+            <div class="selec-car">
+                <img onclick="choose(4)" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>   
+            </div>
+        </div>
 
 
 
-    
-    
+     <div class="fasewant" onclick="screens(3)">Listos!</div>
+
+
+
+
+
+</section>
+
+<section id="fase3" style="display: none;" class="sections">  
+    <h1>Los coches que participan son:</h1>
+
+
+    <div>
+        <p id="ss"></p>
+
+
+    </div>
+
+
+</section>  
+
+
+<section id="fase4" style="display: none;" class="sections">  
+</section>  
+
+
+<section id="fase5" style="display: none;">  
+</section>  
+
+<section id="fase6" style="display: none;">  
+</section>  
+
+
+
+<footer>
+</footer>
+
+
+<script type="text/javascript" src="js/javascript.js"></script>
 </body>
 </html>

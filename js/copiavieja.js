@@ -1,23 +1,21 @@
+//////////// change screens//////////////////////////////////////// 
+ screens = (arg_O) => {
 
-///////////select-players/////////////////////
+    let fasewant = "fase" + arg_O;
+    let arrFases = ["fase1", "fase2", "fase3", "fase4", "fase5", "fase6"];
+    arrFases = arrFases.filter(val => !fasewant.includes(val));
+    document.getElementById(fasewant).style.display = "block";
 
-
-
-
-choose = (id_player) =>{
-
-    this..push(allplayers[id_player]);
-    
-    if (this.team1.length < 1) {
-
-        document.getElementById(id_player).className = "picture-dark";
-        document.getElementById(id_player).onclick = "";
+    for (let _f of arrFases) {
+    document.getElementById(_f).style.display = "none";
     }
 }
 
 
-///////////class car///////////////////////////////////////////////////
 
+///////////class cars///////////////////////////////////////////////////////////////////////////////// 
+
+const KM = 300;
 class car {
     constructor() {
         this.km_recorridos = 0;
@@ -26,12 +24,10 @@ class car {
         this.km_recorridos += aceleration;
     }
 }
-
-///////declaration variables//////////////////////////////////
+///////declaration players//////////////////////////////////
 let car1 = new car();
 let car2 = new car();
 let winner
-const KM = 300;
 ////////////////////////////////////////////////////////////
 
 while (car1.km_recorridos < KM && car2.km_recorridos < KM) {
