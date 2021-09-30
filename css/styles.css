@@ -2,8 +2,9 @@ section{
 padding: 100px;
 }
 div#container-cars {
-display: flex;
-width: 100%;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
 }
 .selec-car{
 width: 33%;
@@ -49,7 +50,12 @@ text-align: center;
 }
 .white{color: white;}
 
+.dark{
+filter: grayscale(100%);
+width: 100%;
+}
 
-.picture-dark{
-
+.container-cars-inter {
+    display: flex;
+    flex-direction: row;
 }

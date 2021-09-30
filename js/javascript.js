@@ -1,19 +1,19 @@
 
 ///////////select-players/////////////////////
 
-
-
+const allplayers =[];
 
 choose = (id_player) =>{
 
-    this..push(allplayers[id_player]);
-    
-    if (this.team1.length < 1) {
+    allplayers.push(id_player)
 
-        document.getElementById(id_player).className = "picture-dark";
-        document.getElementById(id_player).onclick = "";
+    console.log(allplayers)
+
+
+    document.getElementById(id_player).className = "dark";
+        //document.getElementById(id_player).onclick = "";
     }
-}
+
 
 
 ///////////class car///////////////////////////////////////////////////
