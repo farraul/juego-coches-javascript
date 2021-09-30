@@ -8,7 +8,7 @@ class Car {
     }
 
     correr() {
-        return this.km_recorridos += this.velocidad;
+      this.km_recorridos += this.velocidad;
     }
 }
 
