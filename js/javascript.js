@@ -79,3 +79,31 @@ while (coche1.km_recorridos < KM && coche2.km_recorridos < KM) {
 document.getElementById("ss").innerHTML =winner;
 
 }
+
+//alex
+
+const player1 = document.createElement('div')
+
+player1.id = 'player'
+player1.style.cssText = `
+    position: fixed;
+    bottom: 50px;
+    left: 50px;
+    width: 50px;
+    height: 50px;
+    border-radius: 100%;
+    background-color: blue;
+`
+
+
+document.body.addEventListener('keydown', function(event) {
+    
+    if(event.keyCode === 87){
+        const currentPlace = player1.style.left.replace('px', '')
+        console.log(currentPlace, 'current postiion')
+        
+        player1.style.left = `${+currentPlace + 50}px`
+    }
+})
+document.body.appendChild(player1)
+
