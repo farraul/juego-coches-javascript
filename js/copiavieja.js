@@ -5,7 +5,6 @@ const allplayers =[];
 choose = (id_player) =>{
 
     allplayers.push(id_player)
-
     console.log(allplayers)
 
 
