@@ -1,4 +1,3 @@
-
 ///////////select-players/////////////////////
 
 const allplayers =[];
@@ -6,17 +5,42 @@ const allplayers =[];
 choose = (id_player) =>{
 
     allplayers.push(id_player)
-
-    console.log(allplayers)
-
-
     document.getElementById(id_player).className = "dark";
-        //document.getElementById(id_player).onclick = "";
+
+
+   let length_array= allplayers.length;
+ 
+
+   
+    while(length_array==4){
+        console.log("los coches son:");
+
+        const car1_f = allplayers[0];
+        const car2_f = allplayers[1];
+        const car3_f = allplayers[2];
+        const car4_f = allplayers[3];
+    
+        console.log(car1_f);
+        console.log(car2_f);
+        console.log(car3_f);
+        console.log(car4_f);
+      
+
+        length_array+=1;
     }
 
 
 
+}
+
+
+
 ///////////class car///////////////////////////////////////////////////
+
+
+
+
+
 
 class car {
     constructor() {
