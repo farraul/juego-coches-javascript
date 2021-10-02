@@ -36,11 +36,40 @@ let traductorCoches = {
 
 let coche1 = "";
 let coche2 = "";
+let coche3 = "";
+let coche4 = "";
 
 const choose = (cocheElegido) => {
 
     document.getElementById(cocheElegido).className = "dark";
+    document.getElementById(cocheElegido+"info").className = "greyinfo";
+   
+}
 
+   // [cochesElegidos].push=[traductorCoches[cocheElegido]];
+   // console.log[cocheElegido];
+
+ /*   if(coche1 == ""){
+        coche1 = traductorCoches[cocheElegido]; 
+    }else{
+            if(coche2 == ""){
+                coche2 = traductorCoches[cocheElegido];  
+            }else{
+                    if(coche3 == ""){
+                        coche3 = traductorCoches[cocheElegido];  
+
+                        console.log("esta3"+coche3)
+                    }else{
+                                coche4 = traductorCoches[cocheElegido];  
+                                console.log("esta4"+coche4)
+                                result();
+                        }
+                }
+        }
+}*/
+
+
+    /*
     if(coche1 == ""){
         coche1 = traductorCoches[cocheElegido];
     
@@ -49,7 +78,7 @@ const choose = (cocheElegido) => {
         result();
     }
 }
-
+*/
 ///////////////////////////////////////////////////////////////////////////////
 let winner = '';
 const KM = 300;
@@ -57,30 +86,41 @@ const KM = 300;
 const result = () => {
    
     
-while (coche1.km_recorridos < KM && coche2.km_recorridos < KM) {
-    console.log("los coches que han corrido son coche1: " ,  coche1.km_recorridos  + ' coche2 ' , coche2.km_recorridos);
+while (coche1.km_recorridos < KM && coche2.km_recorridos < KM && coche3.km_recorridos < KM && coche4.km_recorridos < KM) {
+    console.log("los coches que han corrido son coche1: " +  coche1.km_recorridos   + ' coche2 '+ coche2.km_recorridos +' coche3 '+ coche3.km_recorridos +' coche4 '+ coche4.km_recorrido);
 
     coche1.correr();
     coche2.correr();
+    coche3.correr();
+    coche4.correr();
 
     if(coche1.km_recorridos>=300){
     
         // alert('Ha ganado coche 1')
         console.log( coche1.nombre + ' es el ganador ' +  coche1.km_recorridos );
-        winner= coche1.nombre + ' es el ganador';
-        
+        winner= coche1.nombre + ' es el ganador'; 
     }
     if(coche2.km_recorridos>=300){
         // alert('Ha ganado coche 2')
         console.log( coche2.nombre + ' coche 2 es el ganador' + coche2.km_recorridos );
         winner= coche2.nombre + ' es el ganador';
     }
+    if(coche3.km_recorridos>=300){
+        // alert('Ha ganado coche 2')
+        console.log( coche3.nombre + ' coche 3 es el ganador' + coche3.km_recorridos );
+        winner= coche3.nombre + ' es el ganador';
+    }
+    if(coche4.km_recorridos>=300){
+        // alert('Ha ganado coche 2')
+        console.log( coche4.nombre + ' coche 4 es el ganador' + coche4.km_recorridos );
+        winner= coche4.nombre + ' es el ganador';
+    }
 }
 document.getElementById("ss").innerHTML =winner;
 
 }
 
-//alex
+//raul parte  que corre el coche
 
 const player1 = document.createElement('div')
 
@@ -102,8 +142,9 @@ document.body.addEventListener('keydown', function(event) {
         const currentPlace = player1.style.left.replace('px', '')
         console.log(currentPlace, 'current postiion')
         
-        player1.style.left = `${+currentPlace + 50}px`
+        player1.style.left = `${+currentPlace + 300}px`
     }
 })
-document.body.appendChild(player1)
+//document.body.appendChild(player1)
+
 
