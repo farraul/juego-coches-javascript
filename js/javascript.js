@@ -13,14 +13,14 @@ class Car {
 }
 
 //////////////declaration variables//////////////////////////////////////////////
-let car1 = new Car(81,"coche 1");
-let car2 = new Car(50,"coche 2");
-let car3 = new Car(131,"coche 3");
-let car4 = new Car(80,"coche 4");
-let car5 = new Car(21,"coche 5");
-let car6 = new Car(10,"coche 6");
-let car7 = new Car(71,"coche 7");
-let car8 = new Car(40,"coche 8");
+let car1 = new Car(1.1,"Denve");
+let car2 = new Car(1.23,"Río");
+let car3 = new Car(1.39,"Nairobi");
+let car4 = new Car(1.3,"Lisboa");
+let car5 = new Car(1.411,"Profesor");
+let car6 = new Car(1.19,"Tokio");
+let car7 = new Car(1.275,"Berlin");
+let car8 = new Car(1.484,"Moscú");
 
 ///////////traductor/////////////////////////////////////////////////////////////
 let traductorCoches = {
@@ -34,117 +34,179 @@ let traductorCoches = {
     "coche8" : car8,
 }
 
-let coche1 = "";
+/*let coche1 = "";
 let coche2 = "";
 let coche3 = "";
 let coche4 = "";
+let coche5 = "";
+let coche6 = "";
+let coche7 = "";
+let coche8 = "";*/
+
+let allcars= [];
 
 const choose = (cocheElegido) => {
 
     document.getElementById(cocheElegido).className = "dark";
     document.getElementById(cocheElegido+"info").className = "greyinfo";
-   
-}
+    document.getElementById(cocheElegido+"info-p1").className = "greyinfo2";
 
-   // [cochesElegidos].push=[traductorCoches[cocheElegido]];
-   // console.log[cocheElegido];
-
- /*   if(coche1 == ""){
-        coche1 = traductorCoches[cocheElegido]; 
-    }else{
-            if(coche2 == ""){
-                coche2 = traductorCoches[cocheElegido];  
-            }else{
-                    if(coche3 == ""){
-                        coche3 = traductorCoches[cocheElegido];  
-
-                        console.log("esta3"+coche3)
-                    }else{
-                                coche4 = traductorCoches[cocheElegido];  
-                                console.log("esta4"+coche4)
-                                result();
-                        }
-                }
-        }
-}*/
-
-
-    /*
-    if(coche1 == ""){
-        coche1 = traductorCoches[cocheElegido];
+    allcars.push(traductorCoches[cocheElegido]);
+     console.log(allcars);
+     if (allcars.length ==4){
     
-    } else {
-        coche2 = traductorCoches[cocheElegido];
-        result();
-    }
+     result();
+     screens(3);
+     
+    document.body.appendChild(player1)
+    document.body.appendChild(player2)
+    document.body.appendChild(player3)
+    document.body.appendChild(player4)
+
+
+     }
 }
-*/
+
+
 ///////////////////////////////////////////////////////////////////////////////
 let winner = '';
-const KM = 300;
+const KM = 3000;
 
 const result = () => {
-   
-    
-while (coche1.km_recorridos < KM && coche2.km_recorridos < KM && coche3.km_recorridos < KM && coche4.km_recorridos < KM) {
-    console.log("los coches que han corrido son coche1: " +  coche1.km_recorridos   + ' coche2 '+ coche2.km_recorridos +' coche3 '+ coche3.km_recorridos +' coche4 '+ coche4.km_recorrido);
+    document.getElementById("result-car-1").innerHTML =allcars[0].nombre;
+    document.getElementById("result-car-2").innerHTML =allcars[1].nombre;
+    document.getElementById("result-car-3").innerHTML =allcars[2].nombre;
+    document.getElementById("result-car-4").innerHTML =allcars[3].nombre;
 
-    coche1.correr();
-    coche2.correr();
-    coche3.correr();
-    coche4.correr();
 
-    if(coche1.km_recorridos>=300){
-    
-        // alert('Ha ganado coche 1')
-        console.log( coche1.nombre + ' es el ganador ' +  coche1.km_recorridos );
-        winner= coche1.nombre + ' es el ganador'; 
+
+
+    while (allcars[0].km_recorridos < KM && allcars[1].km_recorridos < KM && allcars[2].km_recorridos < KM && allcars[3].km_recorridos < KM) 
+    {
+        car1.correr();
+        car2.correr();
+        car3.correr();
+        car4.correr();
+        car5.correr();
+        car6.correr();
+        car7.correr();
+        car8.correr();
+        if(allcars[0].km_recorridos>=3000){
+            winner='El '+ allcars[0].nombre + ' es el ganador!'; 
+        }
+        if(allcars[1].km_recorridos>=3000){
+            winner='El '+ allcars[1].nombre + ' es el ganador!';
+        }
+        if(allcars[2].km_recorridos>=3000){
+            winner='El '+ allcars[2].nombre + ' es el ganador!';
+        }
+        if(allcars[3].km_recorridos>=3000){
+            winner='El '+ allcars[3].nombre + ' es el ganador!';
+        }
+        
     }
-    if(coche2.km_recorridos>=300){
-        // alert('Ha ganado coche 2')
-        console.log( coche2.nombre + ' coche 2 es el ganador' + coche2.km_recorridos );
-        winner= coche2.nombre + ' es el ganador';
-    }
-    if(coche3.km_recorridos>=300){
-        // alert('Ha ganado coche 2')
-        console.log( coche3.nombre + ' coche 3 es el ganador' + coche3.km_recorridos );
-        winner= coche3.nombre + ' es el ganador';
-    }
-    if(coche4.km_recorridos>=300){
-        // alert('Ha ganado coche 2')
-        console.log( coche4.nombre + ' coche 4 es el ganador' + coche4.km_recorridos );
-        winner= coche4.nombre + ' es el ganador';
-    }
+    document.getElementById("ss").innerHTML =winner;
+
 }
-document.getElementById("ss").innerHTML =winner;
 
-}
-
-//raul parte  que corre el coche
+// parte  que corre el coche
 
 const player1 = document.createElement('div')
+const player2 = document.createElement('div')
+const player3 = document.createElement('div')
+const player4 = document.createElement('div')
 
 player1.id = 'player'
 player1.style.cssText = `
+    bottom: 80px;
     position: fixed;
-    bottom: 50px;
     left: 50px;
-    width: 50px;
-    height: 50px;
-    border-radius: 100%;
-    background-color: blue;
+    background-image:url(img/car-run-1.png);
+    background-size: contain;
+    width: 180px;
+    height: 140px;
+    background-repeat: no-repeat;
+ 
+   
+
 `
+player2.id = 'player'
+player2.style.cssText = `
+bottom: 180px;
+position: fixed;
+left: 50px;
+background-image:url(img/car-run-4.png);
+background-size: contain;
+width: 150px;
+height: 60px;
+background-repeat: no-repeat;
+`
+player3.id = 'player'
+player3.style.cssText = `
+bottom: 280px;
+position: fixed;
+left: 50px;
+background-image:url(img/car-run-3.png);
+background-size: contain;
+width: 160px;
+height: 85px;
+background-repeat: no-repeat;
+
+`
+player4.id = 'player'
+player4.style.cssText = `
+bottom: 380px;
+position: fixed;
+left: 50px;
+background-image:url(img/car-run-2.png);
+background-size: contain;
+width: 170px;
+height: 80px;
+background-repeat: no-repeat;
+`
+let car_cont1= 50;
+let car_cont2= 50;
+let car_cont3= 50;
+let car_cont4= 50;
+let identificadorTiempoDeEspera;
+
 
 
 document.body.addEventListener('keydown', function(event) {
-    
-    if(event.keyCode === 87){
-        const currentPlace = player1.style.left.replace('px', '')
-        console.log(currentPlace, 'current postiion')
+
+    if(allcars.length > 0) {
+   
+
         
-        player1.style.left = `${+currentPlace + 300}px`
-    }
+        if(event.keyCode === 32){
+            const vel = 2
+            const maxWidth = window.screen.width
+          
+            document.body.appendChild(player1)
+            document.body.appendChild(player2)
+            document.body.appendChild(player3)
+            document.body.appendChild(player4)
+            let num = 1
+            const interval = setInterval( () => 
+            {
+                
+                if(+player1.style.left.replace('px', '') <= maxWidth && +player2.style.left.replace('px', '') <= maxWidth +player3.style.left.replace('px', '') <= maxWidth +player4.style.left.replace('px', '') <= maxWidth){
+                    player1.style.left = `${allcars[0].velocidad * vel + +player1.style.left.replace('px', '')}px`
+                    player2.style.left = `${allcars[1].velocidad * vel + +player2.style.left.replace('px', '')}px`
+                    player3.style.left = `${allcars[2].velocidad * vel + +player3.style.left.replace('px', '')}px`
+                    player4.style.left = `${allcars[3].velocidad * vel + +player4.style.left.replace('px', '')}px`
+                }
+                else {
+                    clearInterval(interval)
+                    screens(4);
+                }
+            },10)
+     }
+}    
+
 })
-//document.body.appendChild(player1)
+
+
+
 
 

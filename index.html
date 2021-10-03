@@ -12,18 +12,23 @@
 <body>
 
 <section id="fase1" style="display:block;" class="sections">
-    <div class="flex">  
-        <h1 class="align-center white">Bienvenidos a la Race Center de toronto</h1>
-        <div class="fasewant" onclick="screens(2)">Listos!</div>
+    <div class="flex-center-center">  
+        <h1 class="align-center white"></h1>
+        <div class="fasewant" onclick="screens(2)">Iniciar Partida</div>
     </div>
 </section>  
 
 <section id="fase2" style="display: none;" class="sections">
+    <div class="flex-center-center">
+        <h1 class="white">Elige 4 coches</h1>
         <div id="container-cars">
             <div class="container-cars-inter">
                 <div  onclick="choose('coche1')" class="selec-car">
                     <div class="image-back-car">
                     <img style="border-radius: 15px 15px 0px 0px;width:70%;" id="coche1" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/> 
+                    </div>
+                    <div>
+                    <p class="pilots" id="coche1info-p1">Denve</p>
                     </div>
                     <div class="inf_cars" id="coche1info"> 
                         <div class="inf-cars-name">
@@ -42,6 +47,9 @@
                     <div class="image-back-car">
                         <img style="border-radius: 15px 15px 0px 0px;width: 70%;" id="coche2" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/> 
                     </div>
+                    <div>
+                        <p class="pilots" id="coche2info-p1">Río</p>
+                        </div>
                     <div class="inf_cars" id="coche2info"> 
                         <div class="inf-cars-name">
                             <p> Aceleración 0-100 km/h:</p>
@@ -60,6 +68,9 @@
                     <div class="image-back-car">
                     <img  style="border-radius: 15px 15px 0px 0px;width: 70%;" id="coche3" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>
                     </div>
+                    <div>
+                        <p class="pilots" id="coche3info-p1">Nairobi</p>
+                        </div>
                     <div class="inf_cars" id="coche3info"> 
                         <div class="inf-cars-name">
                             <p> Aceleración 0-100 km/h:</p>
@@ -77,6 +88,9 @@
                     <div class="image-back-car">
                     <img style="border-radius: 15px 15px 0px 0px; width: 70%;"   id="coche4" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>
                     </div>
+                    <div>
+                        <p class="pilots" id="coche4info-p1">Lisboa</p>
+                        </div>
                     <div class="inf_cars" id="coche4info"> 
                         <div class="inf-cars-name">
                             <p> Aceleración 0-100 km/h:</p>
@@ -96,6 +110,9 @@
                     <div class="image-back-car">
                     <img style="border-radius: 15px 15px 0px 0px; width: 70%;"   id="coche5" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>
                     </div>
+                    <div>
+                        <p class="pilots" id="coche5info-p1">Profesor</p>
+                        </div>
                     <div class="inf_cars" id="coche5info"> 
                         <div class="inf_cars-name">
                             <p> Aceleración 0-100 km/h:</p>
@@ -113,6 +130,9 @@
                     <div class="image-back-car">
                     <img style="border-radius: 15px 15px 0px 0px; width: 70%;"  id="coche6" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>
                     </div>
+                    <div>
+                        <p class="pilots" id="coche6info-p1">Tokio</p>
+                        </div>
     
                     <div class="inf_cars"id="coche6info"> 
                         <div class="inf-cars-name">
@@ -131,6 +151,9 @@
                     <div class="image-back-car">
                     <img  style="border-radius: 15px 15px 0px 0px;width: 70%;" id="coche7" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>
                     </div>
+                    <div>
+                        <p class="pilots" id="coche7info-p1">Berlin</p>
+                        </div>
                     <div class="inf_cars"id="coche7info"> 
                         <div class="inf-cars-name">
                             <p> Aceleración 0-100 km/h:</p>
@@ -148,6 +171,9 @@
                     <div class="image-back-car">
                     <img style="border-radius: 15px 15px 0px 0px;width: 70%;"  id="coche8" class="the-cars"  src="img/rayo.jpeg"alt="rayo"/>
                     </div>
+                    <div>
+                        <p class="pilots" id="coche8info-p1">Moscú</p>
+                        </div>
                     <div class="inf_cars"id="coche8info"> 
                         <div class="inf-cars-name">
                             <p> Aceleración 0-100 km/h:</p>
@@ -163,29 +189,45 @@
                 </div>
         </div>
         </div>
-
-
-
-     <div class="fasewant" onclick="screens(3)">Listos!</div>
-
-
-
-
+    </div>
 
 </section>
 
-<section id="fase3" style="display: none;" class="sections">  
-    <h1>Los coches que participan son:</h1>
+<section id="fase3" style="display: none;" class="sections"> 
+        
+    <div class="flex-row-center-center">
 
+        
+        <div class="corredores-perfil">
+        <div  class="titles-cars" >
+           <p  id="result-car-1"> </p>
 
-    <div>
-        <p id="ss"></p>
+           <img  style="width: 130px;height: auto;" src="img/piloto1.jpg"alt=""/>
 
-
-
-
-
-
+       
+        </div>
+        </div>
+        <div  class="corredores-perfil">
+            <div  class="titles-cars" >
+                <p  id="result-car-2"> </p>
+                <img  style="width: 170px;height: auto;" src="img/piloto3.jpg"alt=""/>
+            </div>
+        </div>
+        <div  class="corredores-perfil" >
+            <div  class="titles-cars" >
+                <p  id="result-car-3"> </p>
+                <img  style="width: 120px;height: auto;" src="img/piloto2.jpg"alt=""/>
+            </div>
+        </div>
+        <div  class="corredores-perfil">
+            <div  class="titles-cars" >
+                <p  id="result-car-4"> </p>
+                <img  style="width: 200px;height: auto;" src="img/piloto4.jpg"alt=""/>
+            </div>
+        </div>
+    </div>
+    <div id="title-screen3">
+        <h1 id="title-screen3">Pulsa la tecla espacio para empezar la carrera!</h1>
     </div>
 
 
@@ -193,6 +235,21 @@
 
 
 <section id="fase4" style="display: none;" class="sections">  
+
+
+    <div class="flex-center-center">
+
+        <div id="screen-4-align">
+            <!--Aquí imprime el resultado final del ganador-->
+            <p id="ss"></p>
+            <div id="button-reload-game" href="javascript:location.reload()"class="fasewant" href="javascript:location.reload()">Iniciar Partida</div>
+          
+            <p></p>
+            </div>
+
+        </div>
+    </div>
+
 </section>  
 
 
