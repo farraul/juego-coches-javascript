@@ -1,15 +1,13 @@
 body{
 margin: 0em;
 }
-
 section{
 padding: 0px;
 }
 div#container-cars {
     display: flex;
     width: 100%;
-    flex-direction: column;
-    
+    flex-direction: column; 
 }
 .selec-car{
 width: 33%;
@@ -18,17 +16,16 @@ width: 33%;
 width: 100%;
 }
 #fase1{
-background-image:url(../img/background-1.jpg);
-background-size: cover;
+    background-image:url(../img/background-1.jpg);
+    background-size: cover;
 }
 #fase2{
-background-color: rgb(173, 89, 184);
+    background-color: rgb(173, 89, 184);
 }
 #fase3{
-background-color: rgb(178, 171, 214);
+    background-color: rgb(178, 171, 214);
 }
 #fase4{
-
     background-image:url(../img/ganador.jpg);
     background-size: cover;
     width: 100vw;
@@ -36,10 +33,10 @@ background-color: rgb(178, 171, 214);
     background-repeat: no-repeat;
 }
 #fase5{
-background-color: rgb(158, 218, 134);
+    background-color: rgb(158, 218, 134);
 }
 .sections{
-height: 100vh;
+    height: 100vh;
 }
 .fasewant {
     text-align: center;
@@ -58,10 +55,11 @@ height: 100vh;
     margin: 10px 25px;
 }
 .align-center{
-text-align: center;
+    text-align: center;
 }
-.white{color: white;}
-
+.white{
+    color: white;
+}
 .container-cars-inter {
     display: flex;
     flex-direction: row;
@@ -73,23 +71,19 @@ text-align: center;
     justify-content: space-between;
     border-radius: 0px 0px 15px 15px;
 }
-
 .inf-cars-number {
     font-weight: 600;
 }
-
-
 .dark{
     filter: grayscale(100%);
     width: 100%;
     }
-
 .greyinfo{
-background-color:gainsboro;
-display: flex;
-padding: 4px 25px;
-justify-content: space-between;
-border-radius: 0px 0px 15px 15px;
+    background-color:gainsboro;
+    display: flex;
+    padding: 4px 25px;
+    justify-content: space-between;
+    border-radius: 0px 0px 15px 15px;
 }
 .greyinfo2{
     text-align: center;
@@ -98,7 +92,6 @@ border-radius: 0px 0px 15px 15px;
     padding: 11px;
     margin: 1px;
     font-size: 30px;
-   
     }
 .image-back-car {
     background: white;
@@ -108,11 +101,11 @@ border-radius: 0px 0px 15px 15px;
     padding: 10px 0px;
 }
 .flex-center-center{
-height: 100%;
-display: flex;
-align-items: center;
-flex-direction: column;
-justify-content: center;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
 }
 p#ss {
     font-size: 30px;

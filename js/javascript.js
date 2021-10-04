@@ -34,14 +34,7 @@ let traductorCoches = {
     "coche8" : car8,
 }
 
-/*let coche1 = "";
-let coche2 = "";
-let coche3 = "";
-let coche4 = "";
-let coche5 = "";
-let coche6 = "";
-let coche7 = "";
-let coche8 = "";*/
+
 
 let allcars= [];
 
@@ -116,7 +109,6 @@ const player2 = document.createElement('div')
 const player3 = document.createElement('div')
 const player4 = document.createElement('div')
 
-player1.id = 'player'
 player1.style.cssText = `
     bottom: 30px;
     position: fixed;
@@ -126,11 +118,8 @@ player1.style.cssText = `
     width: 180px;
     height: 140px;
     background-repeat: no-repeat;
- 
-   
-
 `
-player2.id = 'player'
+
 player2.style.cssText = `
 bottom: 150px;
 position: fixed;
@@ -141,7 +130,7 @@ width: 150px;
 height: 60px;
 background-repeat: no-repeat;
 `
-player3.id = 'player'
+
 player3.style.cssText = `
 bottom: 240px;
 position: fixed;
@@ -153,7 +142,7 @@ height: 85px;
 background-repeat: no-repeat;
 
 `
-player4.id = 'player'
+
 player4.style.cssText = `
 bottom: 295px;
 position: fixed;
@@ -189,12 +178,12 @@ document.body.addEventListener('keydown', function(event) {
             let num = 1
             const interval = setInterval( () => 
             {
-                
+                //Math.floor(Math.random() * 10) + 1;
                 if(+player1.style.left.replace('px', '') <= maxWidth && +player2.style.left.replace('px', '') <= maxWidth +player3.style.left.replace('px', '') <= maxWidth +player4.style.left.replace('px', '') <= maxWidth){
-                    player1.style.left = `${allcars[0].velocidad * vel + +player1.style.left.replace('px', '')}px`
-                    player2.style.left = `${allcars[1].velocidad * vel + +player2.style.left.replace('px', '')}px`
-                    player3.style.left = `${allcars[2].velocidad * vel + +player3.style.left.replace('px', '')}px`
-                    player4.style.left = `${allcars[3].velocidad * vel + +player4.style.left.replace('px', '')}px`
+                    player1.style.left = `${allcars[0].velocidad  + +player1.style.left.replace('px', '')}px`
+                    player2.style.left = `${allcars[1].velocidad  + +player2.style.left.replace('px', '')}px`
+                    player3.style.left = `${allcars[2].velocidad + +player3.style.left.replace('px', '')}px`
+                    player4.style.left = `${allcars[3].velocidad  + +player4.style.left.replace('px', '')}px`
                 }
                 else {
                     clearInterval(interval)
