@@ -118,7 +118,7 @@ const player4 = document.createElement('div')
 
 player1.id = 'player'
 player1.style.cssText = `
-    bottom: 80px;
+    bottom: 30px;
     position: fixed;
     left: 50px;
     background-image:url(img/car-run-1.png);
@@ -132,7 +132,7 @@ player1.style.cssText = `
 `
 player2.id = 'player'
 player2.style.cssText = `
-bottom: 180px;
+bottom: 150px;
 position: fixed;
 left: 50px;
 background-image:url(img/car-run-4.png);
@@ -143,7 +143,7 @@ background-repeat: no-repeat;
 `
 player3.id = 'player'
 player3.style.cssText = `
-bottom: 280px;
+bottom: 240px;
 position: fixed;
 left: 50px;
 background-image:url(img/car-run-3.png);
@@ -155,7 +155,7 @@ background-repeat: no-repeat;
 `
 player4.id = 'player'
 player4.style.cssText = `
-bottom: 380px;
+bottom: 295px;
 position: fixed;
 left: 50px;
 background-image:url(img/car-run-2.png);
