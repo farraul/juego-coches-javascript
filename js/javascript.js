@@ -1,12 +1,10 @@
 ////////////////class car//////////////////////////////////////////////////////
-
 class Car {
     constructor(velocidad ,nombre) {
        this.velocidad=velocidad;
        this.nombre=nombre;
        this.km_recorridos = 0;
     }
-
     correr() {
       this.km_recorridos += this.velocidad;
     }
@@ -21,7 +19,6 @@ let car5 = new Car(1.411,"Profesor");
 let car6 = new Car(1.19,"Tokio");
 let car7 = new Car(1.275,"Berlin");
 let car8 = new Car(1.484,"Moscú");
-
 ///////////traductor/////////////////////////////////////////////////////////////
 let traductorCoches = {
     "coche1" : car1,
@@ -33,11 +30,7 @@ let traductorCoches = {
     "coche7" : car7,
     "coche8" : car8,
 }
-
-
-
 let allcars= [];
-
 const choose = (cocheElegido) => {
 
     document.getElementById(cocheElegido).className = "dark";
@@ -55,11 +48,8 @@ const choose = (cocheElegido) => {
     document.body.appendChild(player2)
     document.body.appendChild(player3)
     document.body.appendChild(player4)
-
-
      }
 }
-
 
 ///////////////////////////////////////////////////////////////////////////////
 let winner = '';
@@ -70,9 +60,6 @@ const result = () => {
     document.getElementById("result-car-2").innerHTML =allcars[1].nombre;
     document.getElementById("result-car-3").innerHTML =allcars[2].nombre;
     document.getElementById("result-car-4").innerHTML =allcars[3].nombre;
-
-
-
 
     while (allcars[0].km_recorridos < KM && allcars[1].km_recorridos < KM && allcars[2].km_recorridos < KM && allcars[3].km_recorridos < KM) 
     {
@@ -110,14 +97,14 @@ const player3 = document.createElement('div')
 const player4 = document.createElement('div')
 
 player1.style.cssText = `
-    bottom: 30px;
-    position: fixed;
-    left: 50px;
-    background-image:url(img/car-run-1.png);
-    background-size: contain;
-    width: 180px;
-    height: 140px;
-    background-repeat: no-repeat;
+bottom: 30px;
+position: fixed;
+left: 50px;
+background-image:url(img/car-run-1.png);
+background-size: contain;
+width: 180px;
+height: 140px;
+background-repeat: no-repeat;
 `
 
 player2.style.cssText = `
@@ -159,18 +146,12 @@ let car_cont3= 50;
 let car_cont4= 50;
 let identificadorTiempoDeEspera;
 
-
-
 document.body.addEventListener('keydown', function(event) {
 
     if(allcars.length > 0) {
-   
-
-        
         if(event.keyCode === 32){
             const vel = 2
             const maxWidth = window.screen.width
-          
             document.body.appendChild(player1)
             document.body.appendChild(player2)
             document.body.appendChild(player3)
@@ -192,7 +173,6 @@ document.body.addEventListener('keydown', function(event) {
             },10)
      }
 }    
-
 })
 
 
