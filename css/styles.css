@@ -1,8 +1,13 @@
+/*
+Author: Raúl far
+Versión: 1.0
+*/
+
 body{
-margin: 0em;
+    margin: 0em;
 }
 section{
-padding: 0px;
+    padding: 0px;
 }
 div#container-cars {
     display: flex;
@@ -10,10 +15,10 @@ div#container-cars {
     flex-direction: column; 
 }
 .selec-car{
-width: 33%;
+    width: 33%;
 }
 .the-cars{
-width: 100%;
+    width: 100%;
 }
 #fase1{
     background-image:url(../img/background-1.jpg);
