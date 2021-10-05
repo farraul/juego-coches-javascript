@@ -1,5 +1,5 @@
 # Juego de coches creado con html, css y javascript
-El juego permite elegir entre 8 coches, visualizar una carrera entre ellos y saber cual es el ganador.
+El juego permite elegir entre 4 coches entre los 8 disponivles, visualizar una carrera entre ellos y saber cual es el ganador.
 Para visualizar el proyecto: https://farraul.github.io/juego-coches-javascript/
 
 Futuras mejoras: cambiar las imágenes de los coches en su selección, en la función de la velocidad generar numeros aleatorios para que parezca de aceleran de una forma más natural.
